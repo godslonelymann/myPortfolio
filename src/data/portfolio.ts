@@ -81,16 +81,8 @@ export const projects: Project[] = [
     technologies: ["Airflow", "Python", "PostgreSQL", "FastAPI", "React"],
     repositories: [
       {
-        label: "Frontend",
-        url: "https://github.com/godslonelymann/the-catalogue-frontend",
-      },
-      {
-        label: "Data Pipeline",
-        url: "https://github.com/godslonelymann/the-catalogue-data-pipeline",
-      },
-      {
-        label: "Backend",
-        url: "https://github.com/godslonelymann/the-catalogue-backend",
+        label: "GitHub",
+        url: "https://github.com/godslonelymann/the-catalogue",
       },
     ],
     liveDemo: "https://the-catalogue-frontend.vercel.app/",
