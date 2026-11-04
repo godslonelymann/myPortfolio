@@ -11,7 +11,7 @@ export type Project = {
   description: string;
   technologies: string[];
   repositories: { label: string; url: string }[];
-  liveDemo: string;
+  liveDemo?: string;
 };
 
 export type SkillGroup = {
@@ -94,6 +94,18 @@ export const projects: Project[] = [
       },
     ],
     liveDemo: "https://the-catalogue-frontend.vercel.app/",
+  },
+  {
+    title: "Amazon Reviews ETL Pipeline",
+    description:
+      "Built a Dockerized PySpark pipeline that cleans and deduplicates over 2.1 million Amazon appliance reviews, joins product metadata, and validates CSV exports for rating, category, and price analysis in Tableau.",
+    technologies: ["PySpark", "Python", "Docker Compose", "Tableau"],
+    repositories: [
+      {
+        label: "GitHub",
+        url: "https://github.com/godslonelymann/amazon-reviews-etl-pipeline",
+      },
+    ],
   },
 ];
 

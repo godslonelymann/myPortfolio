@@ -18,22 +18,24 @@ export default function Projects() {
               key={project.title}
               className="group relative flex min-h-[29rem] flex-col rounded-lg border border-white/15 bg-transparent p-7 transition-[background-color,border-color] duration-200 hover:border-white/40 hover:bg-white/[0.025] focus-within:border-white/30 md:p-8 xl:min-h-[31rem] xl:p-9"
             >
-              <div className="mb-12 flex items-center justify-between">
+              <div className="mb-12 flex min-h-6 items-center justify-between">
                 <span className="font-mono text-sm text-neutral-600">0{index + 1}</span>
-                <a
-                  href={project.liveDemo}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={`Open ${project.title} live site (opens in a new tab)`}
-                  className="flex items-center gap-2 text-sm text-neutral-400 hover:text-white after:absolute after:inset-0 after:rounded-lg"
-                >
-                  Live site
-                  <ArrowUpRight
-                    size={24}
-                    className="text-neutral-600 transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-white"
-                    aria-hidden="true"
-                  />
-                </a>
+                {project.liveDemo && (
+                  <a
+                    href={project.liveDemo}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`Open ${project.title} live site (opens in a new tab)`}
+                    className="flex items-center gap-2 text-sm text-neutral-400 hover:text-white after:absolute after:inset-0 after:rounded-lg"
+                  >
+                    Live site
+                    <ArrowUpRight
+                      size={24}
+                      className="text-neutral-600 transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-white"
+                      aria-hidden="true"
+                    />
+                  </a>
+                )}
               </div>
 
               <h3 className="text-3xl font-semibold leading-tight tracking-tight text-white xl:text-[2rem]">
