@@ -83,5 +83,5 @@ export const socialLinks = {
     "https://mail.google.com/mail/?view=cm&fs=1&to=anuragworks09%40gmail.com",
   github: "https://github.com/godslonelymann",
   linkedin: "https://www.linkedin.com/in/anuragrgaikwad",
-  resume: "/Anurag_Gaikwad_Data_Engineer_Resume.pdf",
+  resume: "/Anurag_Gaikwad_Resume.pdf",
 };
