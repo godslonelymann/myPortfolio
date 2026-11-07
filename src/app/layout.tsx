@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
 import { Toaster } from "sonner";
 import GridBackground from "@/components/background/GridBackground";
+import { professionalTitle } from "@/data/portfolio";
 import "./globals.css";
 
+const title = `Anurag Gaikwad | ${professionalTitle}`;
+const description = `Portfolio of Anurag Gaikwad, a ${professionalTitle} building data pipelines, databases, and APIs with Python, PostgreSQL, and AWS.`;
+
 export const metadata: Metadata = {
-  title: "Anurag Gaikwad | Data Engineer",
-  description:
-    "Portfolio of Anurag Gaikwad, a Data Engineer focused on batch pipelines, streaming systems, AWS, Spark, Kafka and Airflow.",
+  title,
+  description,
   icons: {
     icon: [
       {
@@ -19,18 +22,16 @@ export const metadata: Metadata = {
     apple: "/portfolio-logo-circular.png",
   },
   openGraph: {
-    title: "Anurag Gaikwad | Data Engineer",
-    description:
-      "Portfolio of Anurag Gaikwad, a Data Engineer focused on batch pipelines, streaming systems, AWS, Spark, Kafka and Airflow.",
+    title,
+    description,
     type: "website",
     locale: "en_IN",
     siteName: "Anurag Gaikwad",
   },
   twitter: {
     card: "summary",
-    title: "Anurag Gaikwad | Data Engineer",
-    description:
-      "Portfolio of Anurag Gaikwad, a Data Engineer focused on batch pipelines, streaming systems, AWS, Spark, Kafka and Airflow.",
+    title,
+    description,
   },
 };
 

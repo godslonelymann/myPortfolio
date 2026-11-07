@@ -8,8 +8,7 @@ export default function About() {
           About
         </h2>
         <p className="max-w-3xl text-2xl leading-relaxed tracking-tight text-neutral-200 md:text-4xl md:leading-snug">
-          I’m a 2026 Artificial Intelligence and Data Science graduate who enjoys working with data and building practical projects. I’m interested in how data moves through systems and focused on growing as a Data Engineer.
-
+          A 2026 graduate in AI and Data Science with a strong interest in backend development and data engineering. Particularly interested in how data is collected, processed, stored, and kept up to date, with a focus on building reliable systems that can handle failures and recover smoothly.
         </p>
       </Reveal>
     </section>

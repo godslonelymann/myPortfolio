@@ -4,7 +4,7 @@ import { motion, useReducedMotion, type Variants } from "framer-motion";
 import { Download } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { toast } from "sonner";
-import { socialLinks, technicalSkills } from "@/data/portfolio";
+import { professionalTitle, socialLinks, technicalSkills } from "@/data/portfolio";
 
 const containerVariants: Variants = {
   hidden: {},
@@ -79,7 +79,13 @@ export default function Hero() {
               variants={itemVariants}
               className="text-xl leading-relaxed text-white md:text-2xl"
             >
-              Aspiring Data Engineer building reliable and scalable pipelines that make data reliable, accessible and ready for analysis.
+              {professionalTitle}
+            </motion.p>
+            <motion.p
+              variants={itemVariants}
+              className="mt-2 text-base leading-relaxed text-neutral-300 md:text-lg"
+            >
+              I build data pipelines, design databases, and develop APIs with Python, PostgreSQL, and AWS.
             </motion.p>
             <motion.p
               variants={itemVariants}
@@ -104,7 +110,7 @@ export default function Hero() {
           >
             <a
               href={socialLinks.resume}
-              download="Anurag_Gaikwad_Data_Engineer_Resume.pdf"
+              download="Anurag_Gaikwad_Data_&_Backend_Engineer.pdf"
               className="inline-flex items-center gap-2 rounded-md bg-white px-5 py-3 text-sm font-semibold text-black shadow-[0_0_24px_rgba(255,255,255,0.2)] ring-1 ring-white/25 transition-[background-color,box-shadow,transform] duration-200 hover:-translate-y-0.5 hover:bg-neutral-100 hover:shadow-[0_0_32px_rgba(255,255,255,0.28)] active:translate-y-0 max-sm:w-full max-sm:justify-center"
             >
               <Download size={16} aria-hidden="true" />

@@ -16,7 +16,7 @@ export default function Contact() {
         <h2 id="contact-title" className="section-label">
           Contact
         </h2>
-        <div className="grid gap-10 md:grid-cols-[2fr_1fr] md:items-end">
+        <div className="grid gap-10 md:grid-cols-[2fr_1fr] md:items-center">
           <h3 className="max-w-4xl text-5xl font-semibold leading-[0.98] tracking-[-0.05em] text-white sm:text-6xl md:text-8xl">
             Let’s build something useful.
           </h3>

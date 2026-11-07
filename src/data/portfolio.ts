@@ -3,7 +3,7 @@ export type ExperienceItem = {
   website?: string;
   role: string;
   period: string;
-  description: string;
+  description: string | string[];
 };
 
 export type Project = {
@@ -19,40 +19,82 @@ export type SkillGroup = {
   skills: string[];
 };
 
+export const professionalTitle = "Data & Backend Engineer";
+
 export const technicalSkills: SkillGroup[] = [
   {
-    category: "Languages",
-    skills: ["Python", "SQL"],
+    category: "Languages & Databases",
+    skills: ["Python", "SQL", "TypeScript", "PostgreSQL", "Redis"],
+  },
+  {
+    category: "Backend & Web",
+    skills: [
+      "FastAPI",
+      "REST APIs",
+      "SQLAlchemy",
+      "Node.js",
+      "Express",
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+    ],
   },
   {
     category: "Data Engineering",
     skills: [
+      "Apache Airflow",
       "PySpark",
       "Spark SQL",
-      "Spark Structured Streaming",
-      "Apache Kafka",
-      "Apache Airflow",
+      "ETL Pipelines",
+      "Data Modeling",
+      "Data Validation",
+      "Data Deduplication",
+      "Web Scraping",
+      "HTTPX",
+      "Alembic",
+      "Ruff",
+      "JSONL",
+      "CSV",
     ],
   },
   {
-    category: "Databases",
-    skills: ["PostgreSQL", "DuckDB", "SQLAlchemy"],
+    category: "Cloud & Tools",
+    skills: [
+      "AWS EC2",
+      "AWS Lambda",
+      "AWS S3",
+      "Amazon EventBridge",
+      "Amazon CloudWatch",
+      "Vercel",
+      "Linux",
+      "Git",
+      "Cron",
+      "systemd",
+      "Caddy",
+      "Docker",
+      "Docker Compose",
+      "Tableau",
+    ],
   },
   {
-    category: "Cloud",
-    skills: ["AWS S3", "AWS Glue", "Amazon Athena", "IAM", "boto3"],
-  },
-  {
-    category: "Tools",
-    skills: ["Docker", "Docker Compose", "Git", "Streamlit", "pandas"],
-  },
-  {
-    category: "Data Formats",
-    skills: ["JSON", "JSONL", "CSV", "Parquet"],
+    category: "Testing & Security",
+    skills: ["pytest", "unittest", "Vitest", "Playwright", "Google OAuth/OIDC", "JWT", "MFA", "CSRF", "Rate Limiting"],
   },
 ];
 
 export const experience: ExperienceItem[] = [
+  {
+    company: "IWM Quant",
+    role: "Data Engineer Intern",
+    period: "August 2026 – October 2026",
+    description: [
+      "Designed a 39-table PostgreSQL database for a mutual fund investment app, covering user accounts, portfolio imports, financial goals, and fund analytics.",
+      "Built reliable data import workflows that prevent duplicate records, maintain traceability of analytics data, and protect sensitive information such as PAN.",
+      "Developed a Python ETL pipeline to collect daily mutual fund NAV data from AMFI, including 12+ years of historical data. Automated ingestion using AWS Lambda and EventBridge Scheduler, with S3 storage and CloudWatch logging.",
+      "Built Python scrapers to collect monthly portfolio disclosures and scheme documents from 50+ AMC websites, then parsed and standardized the data for PostgreSQL.",
+      "Deployed the scraping and processing pipelines on AWS EC2, using month-end cron jobs to automate collection, cleaning, and database loading.",
+    ],
+  },
   {
     company: "NovaProwl",
     website: "https://novaprowl.in",
@@ -77,15 +119,15 @@ export const projects: Project[] = [
   {
     title: "The Catalogue",
     description:
-      "Built a catalogue for Indian streetwear that tracks prices, size availability, and restocks across Shopify stores. An Airflow pipeline refreshes the data daily, and the app offers wishlists and Telegram restock alerts.",
-    technologies: ["Airflow", "Python", "PostgreSQL", "FastAPI", "React"],
+      "Built an app that lets users monitor up to 10 Shopify brands, browse their catalogues, and save products for later. The app refreshes catalogues daily and sends email alerts when a saved product is back in stock in the selected size and colour.",
+    technologies: ["React", "TypeScript", "FastAPI", "PostgreSQL", "Python"],
     repositories: [
       {
         label: "GitHub",
-        url: "https://github.com/godslonelymann/the-catalogue",
+        url: "https://github.com/godslonelymann/the-catalogue-new",
       },
     ],
-    liveDemo: "https://the-catalogue-frontend.vercel.app/",
+    liveDemo: "https://the-catalogue-kappa.vercel.app/",
   },
   {
     title: "Amazon Reviews ETL Pipeline",

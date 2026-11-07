@@ -9,10 +9,10 @@ export default function Experience() {
           Experience
         </h2>
 
-        <div className="border-y border-white/15">
+        <div className="max-w-3xl divide-y divide-white/15 border-y border-white/15">
           {experience.map((item) => (
-            <article key={`${item.company}-${item.role}`} className="grid gap-7 py-8 md:grid-cols-12 md:gap-8 md:py-10">
-              <div className="md:col-span-3">
+            <article key={`${item.company}-${item.role}`} className="py-8 md:py-10">
+              <header className="space-y-1">
                 <h3 className="text-2xl font-semibold text-white">
                   {item.website ? (
                     <a
@@ -28,14 +28,16 @@ export default function Experience() {
                     item.company
                   )}
                 </h3>
-                <p className="mt-2 text-sm text-neutral-500">{item.period}</p>
-              </div>
-              <div className="md:col-span-3">
                 <p className="text-lg font-medium text-neutral-200 md:text-xl">{item.role}</p>
+                <p className="text-sm text-neutral-500">{item.period}</p>
+              </header>
+              <div className="mt-4 space-y-3 text-base leading-7 text-neutral-400 md:text-lg md:leading-8">
+                {typeof item.description === "string" ? (
+                  <p>{item.description}</p>
+                ) : (
+                  item.description.map((paragraph) => <p key={paragraph}>{paragraph}</p>)
+                )}
               </div>
-              <p className="max-w-2xl text-base leading-7 text-neutral-400 md:col-span-6 md:text-lg md:leading-8">
-                {item.description}
-              </p>
             </article>
           ))}
         </div>
