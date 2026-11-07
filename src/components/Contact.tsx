@@ -16,8 +16,8 @@ export default function Contact() {
         <h2 id="contact-title" className="section-label">
           Contact
         </h2>
-        <div className="grid gap-10 md:grid-cols-[2fr_1fr] md:items-center">
-          <h3 className="max-w-4xl text-5xl font-semibold leading-[0.98] tracking-[-0.05em] text-white sm:text-6xl md:text-8xl">
+        <div className="grid gap-10">
+          <h3 className="type-display">
             Let’s build something useful.
           </h3>
 
@@ -31,9 +31,9 @@ export default function Contact() {
                   aria-label={
                     href.startsWith("http") ? `${label} (opens in a new tab)` : label
                   }
-                  className="group flex items-center justify-between py-4 text-sm text-neutral-300 transition-[color,opacity] duration-200 hover:text-white"
+                  className="type-action group flex items-center justify-between gap-3 py-4 text-neutral-300 transition-colors duration-200 hover:text-white"
                 >
-                  <span className="flex items-center gap-3 transition-transform duration-200 group-hover:translate-x-1">
+                  <span className="flex items-center gap-3">
                     <Icon size={17} aria-hidden="true" />
                     {label}
                   </span>

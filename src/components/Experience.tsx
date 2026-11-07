@@ -9,38 +9,38 @@ export default function Experience() {
           Experience
         </h2>
 
-        <div className="max-w-3xl divide-y divide-white/15 border-y border-white/15">
-          {experience.map((item) => (
-            <article key={`${item.company}-${item.role}`} className="py-8 md:py-10">
-              <header className="space-y-1">
-                <h3 className="text-2xl font-semibold text-white">
-                  {item.website ? (
-                    <a
-                      href={item.website}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-block transition-opacity duration-200 hover:opacity-75"
-                      aria-label={`Visit ${item.company} website (opens in a new tab)`}
-                    >
-                      {item.company}
-                    </a>
-                  ) : (
-                    item.company
-                  )}
-                </h3>
-                <p className="text-lg font-medium text-neutral-200 md:text-xl">{item.role}</p>
-                <p className="text-sm text-neutral-500">{item.period}</p>
-              </header>
-              <div className="mt-4 space-y-3 text-base leading-7 text-neutral-400 md:text-lg md:leading-8">
-                {typeof item.description === "string" ? (
-                  <p>{item.description}</p>
+        {experience.map((item) => (
+          <article key={`${item.company}-${item.role}`} className="not-first-of-type:mt-8 md:not-first-of-type:mt-10">
+            <header className="space-y-1">
+              <h3 className="type-title">
+                {item.website ? (
+                  <a
+                    href={item.website}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-block transition-opacity duration-200 hover:opacity-75"
+                    aria-label={`Visit ${item.company} website (opens in a new tab)`}
+                  >
+                    {item.company}
+                  </a>
                 ) : (
-                  item.description.map((paragraph) => <p key={paragraph}>{paragraph}</p>)
+                  item.company
                 )}
+              </h3>
+              <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                <p className="type-body font-medium text-neutral-200">{item.role}</p>
+                <p className="type-meta">{item.period}</p>
               </div>
-            </article>
-          ))}
-        </div>
+            </header>
+            <div className="type-body mt-4 space-y-3">
+              {typeof item.description === "string" ? (
+                <p>{item.description}</p>
+              ) : (
+                item.description.map((paragraph) => <p key={paragraph}>{paragraph}</p>)
+              )}
+            </div>
+          </article>
+        ))}
       </Reveal>
     </section>
   );

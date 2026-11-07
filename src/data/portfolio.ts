@@ -14,73 +14,7 @@ export type Project = {
   liveDemo?: string;
 };
 
-export type SkillGroup = {
-  category: string;
-  skills: string[];
-};
-
 export const professionalTitle = "Data & Backend Engineer";
-
-export const technicalSkills: SkillGroup[] = [
-  {
-    category: "Languages & Databases",
-    skills: ["Python", "SQL", "TypeScript", "PostgreSQL", "Redis"],
-  },
-  {
-    category: "Backend & Web",
-    skills: [
-      "FastAPI",
-      "REST APIs",
-      "SQLAlchemy",
-      "Node.js",
-      "Express",
-      "Next.js",
-      "React",
-      "Tailwind CSS",
-    ],
-  },
-  {
-    category: "Data Engineering",
-    skills: [
-      "Apache Airflow",
-      "PySpark",
-      "Spark SQL",
-      "ETL Pipelines",
-      "Data Modeling",
-      "Data Validation",
-      "Data Deduplication",
-      "Web Scraping",
-      "HTTPX",
-      "Alembic",
-      "Ruff",
-      "JSONL",
-      "CSV",
-    ],
-  },
-  {
-    category: "Cloud & Tools",
-    skills: [
-      "AWS EC2",
-      "AWS Lambda",
-      "AWS S3",
-      "Amazon EventBridge",
-      "Amazon CloudWatch",
-      "Vercel",
-      "Linux",
-      "Git",
-      "Cron",
-      "systemd",
-      "Caddy",
-      "Docker",
-      "Docker Compose",
-      "Tableau",
-    ],
-  },
-  {
-    category: "Testing & Security",
-    skills: ["pytest", "unittest", "Vitest", "Playwright", "Google OAuth/OIDC", "JWT", "MFA", "CSRF", "Rate Limiting"],
-  },
-];
 
 export const experience: ExperienceItem[] = [
   {
