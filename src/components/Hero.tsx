@@ -184,7 +184,7 @@ export default function Hero() {
         >
           <a
             href={socialLinks.resume}
-            download="Anurag_Gaikwad_Data_&_Backend_Engineer.pdf"
+            download="Anurag_Gaikwad_Resume.pdf"
             className="type-action inline-flex items-center gap-2 rounded-md bg-white px-5 py-3 font-semibold text-black shadow-[0_0_24px_rgba(255,255,255,0.2)] ring-1 ring-white/25 transition-[background-color,box-shadow,transform] duration-200 hover:-translate-y-0.5 hover:bg-neutral-100 hover:shadow-[0_0_32px_rgba(255,255,255,0.28)] active:translate-y-0"
           >
             <Download size={16} aria-hidden="true" />
