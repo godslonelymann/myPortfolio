@@ -41,16 +41,6 @@ export const experience: ExperienceItem[] = [
 
 export const projects: Project[] = [
   {
-    title: "PulseGrid",
-    description:
-      "Built a self-hosted uptime monitor for websites and HTTP APIs. It runs scheduled checks, charts uptime and response times, and sends email and webhook alerts when services go down or recover.",
-    technologies: ["Next.js", "FastAPI", "PostgreSQL", "Redis", "Python"],
-    repositories: [
-      { label: "GitHub", url: "https://github.com/godslonelymann/PulseGrid" },
-    ],
-    liveDemo: "https://mypulsegrid.duckdns.org/",
-  },
-  {
     title: "The Catalogue",
     description:
       "Built an app that lets users monitor up to 10 Shopify brands, browse their catalogues, and save products for later. The app refreshes catalogues daily and sends email alerts when a saved product is back in stock in the selected size and colour.",
@@ -62,6 +52,16 @@ export const projects: Project[] = [
       },
     ],
     liveDemo: "https://the-catalogue-kappa.vercel.app/",
+  },
+  {
+    title: "PulseGrid",
+    description:
+      "Built a self-hosted uptime monitor for websites and HTTP APIs. It runs scheduled checks, charts uptime and response times, and sends email and webhook alerts when services go down or recover.",
+    technologies: ["Next.js", "FastAPI", "PostgreSQL", "Redis", "Python"],
+    repositories: [
+      { label: "GitHub", url: "https://github.com/godslonelymann/PulseGrid" },
+    ],
+    liveDemo: "https://mypulsegrid.duckdns.org/",
   },
   {
     title: "Amazon Reviews ETL Pipeline",
