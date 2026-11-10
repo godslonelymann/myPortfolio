@@ -122,17 +122,18 @@ export default function Hero() {
           <svg
             aria-hidden="true"
             className="hero-greeting h-auto w-40 max-w-full text-neutral-200 md:w-48"
-            viewBox="2 1 254 64"
+            viewBox="2 1 274 64"
             fill="none"
             stroke="currentColor"
             strokeWidth="3.35"
             strokeLinecap="round"
             strokeLinejoin="round"
           >
-            {greetingStrokes.map(({ path, delay, duration }) => (
+            {greetingStrokes.map(({ path, delay, duration }, index) => (
               <path
                 key={path}
                 d={path}
+                transform={index >= 3 ? "translate(20 0)" : undefined}
                 pathLength="1"
                 style={{ animationDelay: delay, animationDuration: duration }}
               />
